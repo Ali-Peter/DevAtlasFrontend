@@ -26,6 +26,7 @@ function Hero() {
                     <p className='my-5'>IF I'M NOT DEVELOPING NEW WEB EXPERIENCES OR BUILDING NEW WEBSITES, I'M Probably Gaming or Watching Football.</p>
                 </div>
                 <Link className='text-[16px] hover:underline'>more about me and services</Link>
+                <Link className='text-[16px] hover:underline'>more about me and services</Link>
             </div>
         </div>
     </>
