@@ -29,5 +29,34 @@
 
 body {
     @apply font-monica;
-    background-color: #000000b3;
+    background-color: #e1dfdd;
   }
+
+.custom-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.custom-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+
+#text {
+  display: inline-block;
+}
+#text1 {
+  display: inline-block;
+}
+.animated-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
