@@ -41,10 +41,25 @@ body {
   display: none;
 }
 
-#text {
+#name {
   display: inline-block;
 }
-#text1 {
+#profession {
+  display: inline-block;
+}
+#professionText {
+  display: inline-block;
+}
+#number1 {
+  display: inline-block;
+}
+#number2 {
+  display: inline-block;
+}
+#skill {
+  display: inline-block;
+}
+#project {
   display: inline-block;
 }
 .animated-char {

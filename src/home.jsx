@@ -10,12 +10,10 @@ function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref, {once: true});
 
-  const mainControl = useAnimation();
   const slideControl = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      mainControl.start("visible");
       slideControl.start("visible");
     }
   }, [isInView]);
@@ -63,17 +61,6 @@ function Home() {
           <div ref={ref}>
             <motion.div
               variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate={mainControl}
-              transition={{ duration: 0.5, delay: 3.75 }} // Delay set to total GSAP duration
-            >
-              <Hero />
-            </motion.div>
-            <motion.div
-              variants={{
                 hidden: { left: 0 },
                 visible: { left: "100%" },
               }}
@@ -91,6 +78,7 @@ function Home() {
               }}
             >
             </motion.div>
+            <Hero />
           </div>
           <Footer />
         </div>
