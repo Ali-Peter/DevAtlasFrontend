@@ -2,7 +2,7 @@ import React, { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Loading from "./utilities/loading";
 import Work from "./pages/work";
-import Blog from "./pages/blog";
+import Resume from "./pages/resume";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 
@@ -26,10 +26,10 @@ const Routes = createBrowserRouter([
         )
     },
     {
-        path: "/blog",
+        path: "/resume",
         element: (
             <React.Suspense fallback={<Loading/>}>
-                <Blog />
+                <Resume />
             </React.Suspense>
         )
     },
