@@ -25,11 +25,11 @@ function Work() {
             </span>
             <div className='md:basis-2/4'>
               <RevealPop>
-                <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[75px] font-bold leading-none'>PROJECTS<sup className='md:text-[80px] text-[45px]'>02</sup></h1>
+                <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[65px] font-bold leading-none'>PROJECTS<sup className='md:text-[80px] text-[40px]'>02</sup></h1>
               </RevealPop>
-              <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[80px] font-bold leading-none text-gray-400'>
+              <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[65px] font-bold leading-none text-gray-400'>
                 <Number>
-                  PROS<sup className='md:text-[80px] text-[45px]'>03</sup>
+                  PROS<sup className='md:text-[80px] text-[40px]'>03</sup>
                 </Number>
               </h1>
               <div className='md:flex my-16'>
@@ -49,21 +49,21 @@ function Work() {
           <div>
             {projectItem.map((item, index) => (
               <div key={index} className='md:flex md:gap-5 mt-16'>
-                <div className='md:basis-2/4 md:h-[80vh] h-[40vh] lg:hover:md:py-5 duration-10 lg:custom-scrollbar'>
+                <div className='md:basis-2/4 md:h-[80vh] lg:hover:md:py-5 duration-10 lg:custom-scrollbar'>
                   <a href="">
-                    <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[70px] font-bold leading-none underline'>
+                    <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[60px] font-bold leading-none underline'>
                       <RevealPop>
                         {item.companyName}
                       </RevealPop>
                     </span>
                   </a>
-                  <p className='md:mr-32 md:ml-16 my-5 text-2xl md:mt-24 font-bold text-gray-400 uppercase'>
+                  <p className='md:mr-32 md:ml-16 my-5 md:text-2xl text-xl md:mt-24 font-bold text-gray-400 uppercase'>
                     <Number>
                       {item.companyContext}
                     </Number>
                   </p>
                 </div>
-                <Number className="md:basis-2/4 md:flex md:justify-center md:ml-auto md:items-center md:h-[70vh] h-[50vh] md:mt-3">
+                <Number className="md:basis-2/4 md:flex md:justify-center md:ml-auto md:items-center md:h-[70vh] h-[50vh] mt-3">
                     <img src={item.companyImg} alt="project" className="h-full w-auto max-w-full rounded-lg" />
                 </Number>
               </div>

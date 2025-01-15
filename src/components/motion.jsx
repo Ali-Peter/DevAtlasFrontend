@@ -26,7 +26,7 @@ export const RevealPop = ({ children, className }) => {
         <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 0.5 }}
             className={`flex mt-4 mx-auto ${className}`}
         >
             {children}

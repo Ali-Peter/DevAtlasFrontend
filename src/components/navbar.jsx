@@ -34,7 +34,7 @@ function Navbar() {
   ];
 
   return (
-    <div className="navbar bg-gray-500 sticky top-0 py-3 px-4 shadow md:flex md:items-center md:justify-between z-10">
+    <div className="navbar bg-gray-500 sticky top-0 py-3 pr-4 shadow md:flex md:items-center md:justify-between z-10">
       <div className="flex justify-between items-center">
         <a href="/">
           <DotLottieReact

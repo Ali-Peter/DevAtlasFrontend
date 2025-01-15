@@ -56,7 +56,7 @@ const Contact = () => {
       <div className="md:pt-32 py-24 mx-auto text-[#000] relative z-2 md:h-screen custom-scrollbar">
         <div className="md:flex flex-col items-center justify-center md:px-16 px-5">
           <div className="">
-            <h1 className="lg:text-[50px] md:mt-16 uppercase text-[60px] font-bold leading-none">
+            <h1 className="lg:text-[50px] md:mt-16 uppercase text-[55px] font-bold leading-none">
               <RevealPop>
                 CONTACT US
               </RevealPop>

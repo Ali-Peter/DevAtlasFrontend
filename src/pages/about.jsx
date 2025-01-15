@@ -56,7 +56,7 @@ const About = () => {
               </span>
               <div className='md:basis-2/4'>
                 <RevealPop>
-                  <h1 className='lg:text-[140px] mt-16 uppercase text-[65px] font-bold leading-none'>
+                  <h1 className='lg:text-[140px] mt-16 uppercase text-[55px] font-bold leading-none'>
                     Passionate creative developer
                   </h1>
                 </RevealPop>
@@ -84,7 +84,7 @@ const About = () => {
                 </p>
               </div>
               <div className='md:w-[45%] md:bg-black/70 md:flex-col flex justify-center items-center'>
-                <RevealPop>
+                <RevealPop className="flex justify-center items-center">
                   <img src={about_cover} alt="ali" className='md:w-full w-[90%] md:h-[90vh] h-[40vh]' />
                 </RevealPop>
               </div>
@@ -99,13 +99,13 @@ const About = () => {
                 </Number>
               </span>
               <div className='md:basis-2/4'>
-                <h1 className='lg:text-[140px] md:mt-10 uppercase text-[75px] font-bold leading-none'>
+                <h1 className='lg:text-[140px] md:mt-10 uppercase text-[65px] font-bold leading-none'>
                   <RevealPop>
                     Services
                   </RevealPop>
                 </h1>
-                <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[80px] font-bold leading-none text-gray-400'>
-                  PROS<sup className='md:text-[80px] text-[45px]'>03</sup>
+                <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[65px] font-bold leading-none text-gray-400'>
+                  PROS<sup className='md:text-[80px] text-[40px]'>03</sup>
                 </h1>
               </div>
             </div>
@@ -117,8 +117,8 @@ const About = () => {
                     <div key={index} className="my-1 w-[100%] rounded-[2px] hover:bg-gray-400">
                       <button
                         onClick={() => handleTabClick(index)}
-                        className={`md:p-2 px-2 md:w-[100%] text-gray-500 md:text-2xl text-xl text-start rounded-[2px] ${
-                          activeTab === index ? 'md:border-l-4 md:border-b-0 border-b-4 border-orange-300 text-black' : null
+                        className={`md:p-2 px-2 md:w-[100%] text-gray-500 md:text-2xl text-sm text-start rounded-[2px] ${
+                          activeTab === index ? 'md:border-l-4 md:border-b-0 border-b-4 border-orange-300 text-white bg-gray-500' : null
                         }`}
                       >
                         <Number>
@@ -189,27 +189,27 @@ const About = () => {
             </span>
             <div className='md:basis-1/4'>
               <RevealPop>
-                <h1 className='lg:text-[35px] my-2 uppercase text-[75px] font-bold leading-none'>SEE LATEST PROJECT</h1>
+                <h1 className='lg:text-[35px] my-2 uppercase text-[65px] font-bold leading-none'>SEE LATEST PROJECT</h1>
               </RevealPop>     
             </div>
           </div>
           <div className='md:px-16 px-5'>
             <div className='md:flex md:gap-5 mt-16'>
-              <div className='md:basis-2/4 md:h-[80vh] h-[40vh] lg:hover:md:py-5 duration-10 lg:custom-scrollbar'>
+              <div className='md:basis-2/4 md:h-[80vh] lg:hover:md:py-5 duration-10 lg:custom-scrollbar'>
                 <a href="">
-                  <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[70px] font-bold leading-none underline'>
+                  <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[60px] font-bold leading-none underline'>
                     <RevealPop>
                       {latestProject.companyName}
                     </RevealPop>
                   </span>
                 </a>
-                <p className='md:mr-64 md:ml-8 my-5 text-2xl md:mt-16 font-bold text-gray-400 uppercase'>
+                <p className='md:mr-64 md:ml-8 my-5 md:text-2xl text-sm md:mt-16 font-bold text-gray-400 uppercase'>
                   <Number>
                     {latestProject.companyContext}
                   </Number>
                 </p>
               </div>
-              <Number className="md:basis-2/4 md:flex md:justify-center md:ml-auto md:items-center md:h-[70vh] h-[50vh] md:mt-3">
+              <Number className="md:basis-2/4 md:flex md:justify-center md:ml-auto md:items-center md:h-[70vh] h-[50vh] mt-3">
                   <img src={latestProject.companyImg} alt="project" className="h-full w-auto max-w-full rounded-lg" />
               </Number>
             </div>

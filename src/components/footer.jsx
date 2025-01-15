@@ -20,7 +20,7 @@ function Footer() {
           className="footer-content"
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
         >
           <div className="py-2">
             <span>Ali Ogochukwu Peter</span>
