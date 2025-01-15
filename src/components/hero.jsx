@@ -27,9 +27,9 @@ const Hero = () => {
                             <img src={profile} alt=""  width="240" height="240" className=''/>
                         </div>
                         <div id='name' className='mt-5'>
-                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none'>H<span className='font-PermanentMarker lowercase'>i</span>, Ali</h1>
-                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none'>Ogochukwu</h1>
-                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none'>Peter</h1>
+                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker'>H<span className='font-PermanentMarker lowercase'>i</span>, Ali</h1>
+                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker'>Ogochukwu</h1>
+                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker'>Peter</h1>
                         </div>
                         <div className='mt-2'>
                             <p className='font-bold text-xl text-white'>Full Stack Developer</p>
