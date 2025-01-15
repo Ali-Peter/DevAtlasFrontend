@@ -27,9 +27,9 @@ const Hero = () => {
                             <img src={profile} alt=""  width="240" height="240" className=''/>
                         </div>
                         <div id='name' className='mt-5'>
-                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker'>H<span className='font-PermanentMarker lowercase'>i</span>, Ali</h1>
-                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker'>Ogochukwu</h1>
-                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker'>Peter</h1>
+                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker md:font-monica'>H<span className='font-PermanentMarker lowercase'>i</span>, Ali</h1>
+                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker md:font-monica'>Ogochukwu</h1>
+                            <h1 className='lg:text-[80px] my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker md:font-monica'>Peter</h1>
                         </div>
                         <div className='mt-2'>
                             <p className='font-bold text-xl text-white'>Full Stack Developer</p>
@@ -54,7 +54,7 @@ const Hero = () => {
                               whileInView={{opacity: 1, scale: 1}}
                               transition={{duration: 1}}
                               className='md:text-center'>
-                                <h1 id='profession' className='lg:text-[60px] md:my-12 my-2 uppercase text-[50px] font-bold leading-none'>Full Stack Developer</h1>
+                                <h1 id='profession' className='lg:text-[60px] md:my-12 my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker md:font-monica'>Full Stack Developer</h1>
                             </motion.div>
                             <div className='flex uppercase my-16'>
                                 <div id='number1' className='basis-1/5'>
@@ -80,7 +80,7 @@ const Hero = () => {
                             whileInView={{opacity: 1, scale: 1}}
                             transition={{duration: 2}}
                             className='md:text-center'>
-                            <h1 className='lg:text-[60px] md:my-12 my-2 uppercase text-[50px] font-bold leading-none'>SKILLS</h1>
+                            <h1 className='lg:text-[60px] md:my-12 my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker md:font-monica'>SKILLS</h1>
                         </motion.div>
                         <div className='flex uppercase my-16'>
                             <div id='number2' className='basis-1/5'>
@@ -106,7 +106,7 @@ const Hero = () => {
                             whileInView={{opacity: 1, scale: 1}}
                             transition={{duration: 2}}
                             className='md:text-center'>
-                            <h1 className='lg:text-[60px] md:my-12 my-2 uppercase text-[50px] font-bold leading-none'>PROJECTS</h1>
+                            <h1 className='lg:text-[60px] md:my-12 my-2 uppercase text-[50px] font-bold leading-none font-PermanentMarker md:font-monica'>PROJECTS</h1>
                             <p className=''>A selected set of projects i've built with individuals and teams. This is a mix of personal, collaborative and client owned projects.</p>
                         </motion.div>
                         <div className='flex my-16'>

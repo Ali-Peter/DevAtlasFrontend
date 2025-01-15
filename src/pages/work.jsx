@@ -25,7 +25,7 @@ function Work() {
             </span>
             <div className='md:basis-2/4'>
               <RevealPop>
-                <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[65px] font-bold leading-none'>PROJECTS<sup className='md:text-[80px] text-[40px]'>02</sup></h1>
+                <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[60px] font-bold leading-none font-PermanentMarker md:font-monica'>PROJECTS<sup className='md:text-[80px] text-[40px]'>02</sup></h1>
               </RevealPop>
               <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[65px] font-bold leading-none text-gray-400'>
                 <Number>
@@ -51,7 +51,7 @@ function Work() {
               <div key={index} className='md:flex md:gap-5 mt-16'>
                 <div className='md:basis-2/4 md:h-[80vh] lg:hover:md:py-5 duration-10 lg:custom-scrollbar'>
                   <a href="">
-                    <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[60px] font-bold leading-none underline'>
+                    <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[55px] font-bold leading-none underline font-PermanentMarker md:font-monica'>
                       <RevealPop>
                         {item.companyName}
                       </RevealPop>

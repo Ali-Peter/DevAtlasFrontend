@@ -27,7 +27,7 @@ const Resume = () => {
               </Number>
             </span>
             <div className="md:basis-2/4 md:flex md:flex-col md:justify-center md:items-center">
-              <h1 className="lg:text-[50px] md:mt-16 uppercase text-[65px] font-bold leading-none text-center">
+              <h1 className="lg:text-[50px] md:mt-16 uppercase text-[65px] font-bold leading-none text-center font-PermanentMarker md:font-monica">
                 <RevealPop>
                   Resume
                 </RevealPop>

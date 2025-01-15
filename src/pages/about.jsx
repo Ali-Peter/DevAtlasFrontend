@@ -56,7 +56,7 @@ const About = () => {
               </span>
               <div className='md:basis-2/4'>
                 <RevealPop>
-                  <h1 className='lg:text-[140px] mt-16 uppercase text-[55px] font-bold leading-none'>
+                  <h1 className='lg:text-[140px] mt-16 uppercase text-[50px] font-bold leading-none font-PermanentMarker md:font-monica'>
                     Passionate creative developer
                   </h1>
                 </RevealPop>
@@ -99,7 +99,7 @@ const About = () => {
                 </Number>
               </span>
               <div className='md:basis-2/4'>
-                <h1 className='lg:text-[140px] md:mt-10 uppercase text-[65px] font-bold leading-none'>
+                <h1 className='lg:text-[140px] md:mt-10 uppercase text-[65px] font-bold leading-none font-PermanentMarker md:font-monica'>
                   <RevealPop>
                     Services
                   </RevealPop>
@@ -189,7 +189,7 @@ const About = () => {
             </span>
             <div className='md:basis-1/4'>
               <RevealPop>
-                <h1 className='lg:text-[35px] my-2 uppercase text-[65px] font-bold leading-none'>SEE LATEST PROJECT</h1>
+                <h1 className='lg:text-[35px] my-2 uppercase text-[65px] font-bold leading-none font-PermanentMarker md:font-monica'>SEE LATEST PROJECT</h1>
               </RevealPop>     
             </div>
           </div>
@@ -197,7 +197,7 @@ const About = () => {
             <div className='md:flex md:gap-5 mt-16'>
               <div className='md:basis-2/4 md:h-[80vh] lg:hover:md:py-5 duration-10 lg:custom-scrollbar'>
                 <a href="">
-                  <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[60px] font-bold leading-none underline'>
+                  <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[60px] font-bold leading-none underline font-PermanentMarker md:font-monica'>
                     <RevealPop>
                       {latestProject.companyName}
                     </RevealPop>
