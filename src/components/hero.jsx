@@ -70,7 +70,7 @@ const Hero = () => {
                                         <p className='my-5'>IF I'M NOT DEVELOPING NEW WEB EXPERIENCES OR BUILDING NEW WEBSITES, I'M Probably Gaming or Watching Football.</p>
                                     </Number>
                                     <Number>
-                                        <Link className='text-[16px] hover:underline'>more about me and services</Link>
+                                        <a href="/about" className='text-[16px] text-blue-500 hover:underline'>more about me and services</a>
                                     </Number>
                                 </div>
                             </div>
@@ -118,12 +118,14 @@ const Hero = () => {
                             <div className='basis-4/5 mt-3'>
                                     <div>
                                         <Number>
-                                            <img src={project1} alt="project1"/>
+                                            <a href="https://lagfloral.netlify.app/">
+                                                <img src={project1} alt="project1"/>
+                                            </a>
                                         </Number>
                                         <Number>
-                                            <a href="" className='flex font-bold my-3 text-xl text-[#000]'>
+                                            <a href="https://lagfloral.netlify.app/" className='flex font-bold my-3 text-xl text-[#000]'>
                                                 <span>Flower Imperials</span>
-                                                <svg className='mx-2 mt-[5px]' stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-1 group-hover:stroke-teal-300 lg:ml-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                                <svg className='mx-2 mt-[5px] text-blue-500' stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-1 group-hover:stroke-teal-300 lg:ml-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                                             </a>
                                         </Number>
                                         <Number>
@@ -146,12 +148,14 @@ const Hero = () => {
                                     </div>
                                     <div className='mt-16'>
                                         <Number>
-                                            <img src={project2} alt="project1"/>
+                                            <a href="https://www.wechorafoods.com/">
+                                                <img src={project2} alt="project1"/>
+                                            </a>
                                         </Number>
                                         <Number>
-                                            <a href="" className='flex font-bold my-3 text-xl text-[#000]'>
+                                            <a href="https://www.wechorafoods.com/" className='flex font-bold my-3 text-xl text-[#000]'>
                                                 <span>Wechora Foods</span>
-                                                <svg className='mx-2 mt-[5px]' stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-1 group-hover:stroke-teal-300 lg:ml-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                                <svg className='mx-2 mt-[5px] text-blue-500' stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-1 group-hover:stroke-teal-300 lg:ml-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                                             </a>
                                         </Number>
                                         <Number>
@@ -179,6 +183,11 @@ const Hero = () => {
                                         </span>
                                     </div>
                             </div>
+                        </div>
+                        <div className='flex justify-center items-center'>
+                        <Number>
+                            <a href="/work" className='text-[16px] text-blue-500 hover:underline'>Visit my project hub</a>
+                        </Number>
                         </div>
                 </div>
             </div>

@@ -50,7 +50,7 @@ function Work() {
             {projectItem.map((item, index) => (
               <div key={index} className='md:flex md:gap-5 mt-16'>
                 <div className='md:basis-2/4 md:h-[80vh] lg:hover:md:py-5 duration-10 lg:custom-scrollbar'>
-                  <a href="">
+                  <a href={item.links}>
                     <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[55px] font-bold leading-none underline font-PermanentMarker md:font-monica'>
                       <RevealPop>
                         {item.companyName}
@@ -64,7 +64,9 @@ function Work() {
                   </p>
                 </div>
                 <Number className="md:basis-2/4 md:flex md:justify-center md:ml-auto md:items-center md:h-[70vh] h-[50vh] mt-3">
-                    <img src={item.companyImg} alt="project" className="h-full w-auto max-w-full rounded-lg" />
+                    <a href={item.links}>
+                      <img src={item.companyImg} alt="project" className="h-full w-auto max-w-full rounded-lg" />
+                    </a>
                 </Number>
               </div>
             ))}

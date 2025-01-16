@@ -19,16 +19,19 @@ export const projectItem = [
         "companyName": "Flower Imperials",
         "companyContext": "An E-commerce website landing page for a flower shop called Flower Imperials.",
         "companyImg": project1,
+        "links": "https://lagfloral.netlify.app/"
     },
     {
         "companyName": "Wechora Foods",
         "companyContext": "An E-commerce website landing page for a food and Nutrition company called Wechora Foods.",
         "companyImg": project2,
+        "links": "https://www.wechorafoods.com/"
     },
     {
         "companyName": "FinImage Inventory",
         "companyContext": "A supermarket inventory system",
         "companyImg": project3,
+        "links": "#"
     },
 ];
 
