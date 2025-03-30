@@ -1,11 +1,11 @@
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "scrollreveal";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import project1 from '../assets/project_image_1.jpg';
 import project2 from '../assets/project_image_2.png';
 import project3 from '../assets/project_image_3.jpg';
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import { pageTransition } from "../components/animations";
 import { Link } from "react-router-dom";
 import { Number } from "../components/motion";

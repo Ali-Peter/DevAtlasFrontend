@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 import profile from './assets/profile.png';
 import project1 from './assets/project_image_1.jpg';
 import project2 from './assets/project_image_2.png';

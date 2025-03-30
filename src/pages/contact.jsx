@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import {Number, RevealPop} from '../components/motion'
 import {motion} from 'framer-motion'
