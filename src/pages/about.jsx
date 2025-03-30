@@ -15,7 +15,7 @@ const About = () => {
   const handleTabClick = (index) => {
     setActiveTab(index);
 
-    // Reorder tabs: move clicked tab to the front visually
+
     const updatedTabs = [
       tabs[index],
       ...tabs.slice(0, index),
