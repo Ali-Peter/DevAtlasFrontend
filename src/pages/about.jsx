@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import Navbar from '../components/navbar';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import about_cover from "../assets/about-cover.jpg";
 import {tabs, hobbies} from "../components/motion"
 import {Number, RevealPop} from '../components/motion'
 import { projectItem } from '../components/contentFunction';
-import Footer from '../components/footer';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const About = () => {
   const latestProject = projectItem[0];
@@ -40,13 +39,7 @@ const About = () => {
     <>
       <Navbar />
       <div className="relative h-full overflow-hidden">
-        <DotLottieReact
-            src="https://lottie.host/0a9a0441-ac5d-4c8d-b718-dd5bdeda0061/89dPHFuwUV.lottie"
-            loop
-            autoplay
-            className="absolute inset-0 w-full h-full z-[-1] ml-[-10vw]"
-        />
-        <div className='md:pt-32 pt-16 py-24 mx-auto text-[#000] relative z-2 md:h-screen custom-scrollbar'>
+        <div className='md:pt-32 pt-16 py-24 mx-auto text-white relative z-2 md:h-screen bg-gray-900 custom-scrollbar'>
           <div>
             <div className='md:flex items-start md:px-16 px-5'>
               <span className='md:text-4xl sm:text-3xl text-2xl text-gray-400 md:py-4 py-8 md:basis-1/4'>

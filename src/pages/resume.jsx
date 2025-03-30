@@ -1,26 +1,18 @@
-import React from 'react';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { pageTransition } from "../components/animations";
 import {Number, RevealPop} from '../components/motion'
 
 const Resume = () => {
-  const resumeUrl = '/MyResume.pdf'; // Update with the actual path to your resume file
+  const resumeUrl = '/Ali-Ogochukwu-Peter.pdf';
+  const aliHngCertificateUrl = '/Ali-Peter-HNG.jpg';
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Navbar />
-      <div className="relative h-full overflow-hidden">
-      <DotLottieReact
-        src="https://lottie.host/0a9a0441-ac5d-4c8d-b718-dd5bdeda0061/89dPHFuwUV.lottie"
-        loop
-        autoplay
-        className="absolute inset-0 w-full h-full z-[-1] ml-[-10vw]"
-      />
-      <div className='relative z-2 md:h-screen custom-scrollbar'>
-      <div className="">
-        <div className="md:pt-32 py-24 mx-auto text-[#000] relative z-2 custom-scrollbar">
-          <div className="md:flex items-start md:px-16 px-5">
+      <motion.div {...pageTransition} className="container mx-auto p-8 text-center">
+      <div className="md:flex items-start md:px-16 px-5">
             <span className="md:text-4xl sm:text-3xl text-2xl text-gray-400 py-4 md:basis-1/4">
               <Number>
                 01/
@@ -39,28 +31,46 @@ const Resume = () => {
               </p>
             </div>
           </div>
-          <div className="flex justify-center items-center mt-16">
-            <iframe
-              src={resumeUrl}
-              title="Resume"
-              className="md:w-[80%] w-full md:h-[90vh] sm:h-[80vh] h-[60vh] border border-gray-300 shadow-md rounded-md"
-            ></iframe>
-          </div>
-          <div className="flex justify-center items-center mt-8">
-            <a
-              href={resumeUrl}
-              download
-              className="text-white bg-black hover:bg-gray-800 px-6 py-3 rounded-md text-lg font-semibold transition duration-200 hover:scale-105"
+        
+        {/* Resume Preview */}
+        <div className="mt-6">
+          <iframe
+            src={resumeUrl}
+            title="Resume"
+            className="w-full md:w-3/4 h-[500px] mx-auto border border-gray-700 rounded-lg shadow-lg"
+          ></iframe>
+        </div>
+
+        {/* Download Button */}
+        <div className="mt-6">
+          <a 
+            href={resumeUrl} 
+            download 
+            className="bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition"
+          >
+            Download Resume
+          </a>
+        </div>
+
+        {/* Certifications Section */}
+        <div className="mt-12">
+          <h2 className="text-3xl font-semibold">Certification</h2>
+          <div className="mt-4 bg-gray-800 p-6 rounded-lg shadow-lg inline-block">
+            <h3 className="text-xl font-bold">HNG Internship</h3>
+            <p className="text-gray-400 mt-2">Successfully completed the HNG Internship program.</p>
+            <a 
+              href={aliHngCertificateUrl} // Ensure the certificate document is placed in the public folder
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-yellow-400 mt-4 inline-block hover:underline"
             >
-              Download Resume
+              View Certificate
             </a>
           </div>
         </div>
-      </div>
-      </div>
-      </div>
+      </motion.div>
       <Footer />
-    </>
+    </div>
   );
 };
 

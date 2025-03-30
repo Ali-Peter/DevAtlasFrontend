@@ -14,7 +14,7 @@ function Footer() {
 
   return (
     <>
-      <footer className="bg-black/70 text-white px-2 text-center">
+      <footer className="bg-black/80 text-white px-2 text-center">
         {/* GSAP Animated Footer Content */}
         <motion.div
           className="footer-content"
@@ -24,7 +24,7 @@ function Footer() {
         >
           <div className="py-2">
             <span>Ali Ogochukwu Peter</span>
-            <h5>Full-Stack Dev</h5>
+            <h5>Full-Stack Developer | Backend Specialist</h5>
           </div>
           <p className="py-5">
             Built from scratch with 💙 <span>© </span>All rights reserved. {currentYear}

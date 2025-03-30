@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import {Number, RevealPop} from '../components/motion'
 import {motion} from 'framer-motion'
@@ -47,13 +47,7 @@ const Contact = () => {
     <>
       <Navbar />
       <div className="relative h-full overflow-hidden">
-      <DotLottieReact
-        src="https://lottie.host/0a9a0441-ac5d-4c8d-b718-dd5bdeda0061/89dPHFuwUV.lottie"
-        loop
-        autoplay
-        className="absolute inset-0 w-full h-full z-[-1] ml-[-10vw]"
-      />
-      <div className="md:pt-32 py-24 mx-auto text-[#000] relative z-2 md:h-screen custom-scrollbar">
+      <div className="md:pt-32 py-24 mx-auto bg-gray-900 text-white relative z-2 md:h-screen custom-scrollbar">
         <div className="md:flex flex-col items-center justify-center md:px-16 px-5">
           <div className="">
             <h1 className="lg:text-[50px] md:mt-16 uppercase text-[50px] font-bold leading-none font-PermanentMarker md:font-monica">
@@ -94,7 +88,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-black"
+                    className="w-full p-3 rounded-lg border-2 border-gray-300 text-black focus:outline-none focus:border-black"
                     required
                   />
                 </div>
@@ -108,7 +102,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-black"
+                    className="w-full p-3 rounded-lg border-2 border-gray-300 text-black focus:outline-none focus:border-black"
                     required
                   />
                 </div>
@@ -125,13 +119,13 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="5"
-                    className="w-full p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-black"
+                    className="w-full p-3 rounded-lg border-2 border-gray-300 text-black focus:outline-none focus:border-black"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="bg-black text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition duration-200"
+                  className="bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-200"
                 >
                   Send Message
                 </button>

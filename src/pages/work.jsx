@@ -1,81 +1,119 @@
-import React from 'react';
-import Navbar from '../components/navbar';
-import { projectItem } from '../components/contentFunction';
-import Footer from '../components/footer';
-import {Number, RevealPop} from '../components/motion'
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useEffect, useMemo } from "react";
+import { motion } from "framer-motion";
+import ScrollReveal from "scrollreveal";
+import Navbar from "../components/Navbar";
+import project1 from '../assets/project_image_1.jpg';
+import project2 from '../assets/project_image_2.png';
+import project3 from '../assets/project_image_3.jpg';
+import Footer from "../components/Footer";
+import { pageTransition } from "../components/animations";
+import { Link } from "react-router-dom";
+import { Number } from "../components/motion";
 
-function Work() {
+const Work = () => {
+  // Use useMemo to optimize project array creation
+  const projects = useMemo(() => [
+    {
+      title: "Flower Imperials",
+      description: "A fully functional e-commerce website for a flower shop, featuring product listings, a shopping cart, checkout functionality, and secure online payments via Flutterwave. The platform provides a seamless user experience with a modern UI, responsive design, and real-time API interactions.",
+      technologies: ["ReactJS", "NodeJS", "Tailwind CSS", "Axios", "Flutterwave"],
+      link: "https://lagfloral.netlify.app/",
+      image: project1
+    },
+    {
+      title: "Outbound AI Backend",
+      description: "An AI-powered call automation solution designed to help businesses manage outbound calls efficiently. This system leverages speech-to-text and text-to-speech technologies to handle customer interactions, automate follow-ups, and provide real-time insights. It integrates with multiple AI providers for transcription, natural language processing, and voice synthesis, ensuring high-quality, human-like conversations. The backend is built with FastAPI and optimized for scalability, handling concurrent calls seamlessly with Celery task processing and PostgreSQL for data storage.",
+      technologies: ["FastAPI", "PostgreSQL", "Celery", "Deepgram", "ElevenLabs"],
+      link: "https://outbound.im/",
+      image: project2
+    },
+    {
+      title: "Wechora Foods",
+      description: "A feature-rich e-commerce platform for a food company, offering seamless online ordering and a user-friendly experience. It includes product browsing, category filtering, and an intuitive checkout process. The backend is built with Node.js and Express, handling secure user authentication, order processing, and real-time inventory management. Integrated with Mongoose for efficient database operations and Axios for smooth API communication, Wechora Foods ensures a fast and responsive shopping experience.",
+      technologies: ["ReactJS", "NodeJS", "Mongoose", "ExpressJS", "Tailwind CSS", "Axios"],
+      link: "https://www.wechorafoods.com/",
+      image: project3
+    }
+  ], []);
+  
+
+  useEffect(() => {
+    ScrollReveal().reveal(".project-card", {
+      duration: 1000,
+      origin: "bottom",
+      distance: "50px",
+      easing: "ease-in-out",
+      reset: false // Prevents unnecessary re-triggering
+    });
+  }, []);
+
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Navbar />
-      <div className="relative h-full overflow-hidden">
-        <DotLottieReact
-            src="https://lottie.host/0a9a0441-ac5d-4c8d-b718-dd5bdeda0061/89dPHFuwUV.lottie"
-            loop
-            autoplay
-            className="absolute inset-0 w-full h-full z-[-1] ml-[-10vw]"
-        />
-        <div className='md:pt-64 py-24 md:px-16 px-5 mx-auto text-[#000] relative z-2 md:h-screen custom-scrollbar'>
-          <div className='md:flex items-start'>
-            <span className='md:text-4xl sm:text-3xl text-2xl text-gray-400 py-4 md:basis-1/4'>
-              <Number>
-                01/
-              </Number>
-            </span>
-            <div className='md:basis-2/4'>
-              <RevealPop>
-                <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[60px] font-bold leading-none font-PermanentMarker md:font-monica'>PROJECTS<sup className='md:text-[80px] text-[40px]'>02</sup></h1>
-              </RevealPop>
-              <h1 className='lg:text-[140px] md:my-12 my-2 uppercase text-[65px] font-bold leading-none text-gray-400'>
-                <Number>
-                  PROS<sup className='md:text-[80px] text-[40px]'>03</sup>
-                </Number>
+      <motion.div {...pageTransition} className="container mx-auto p-8">
+        <div className='md:flex items-start'>
+          <span className='text-2xl text-gray-400 py-4 md:basis-1/4'>
+            <Number>01/</Number>
+          </span>
+          <div className='md:basis-2/4'>
+            <div className='my-16'>
+              <h1 className='md:my-12 my-2 uppercase text-3xl md:text-4xl font-bold leading-none'>
+                <Number>PROJECTS</Number>
               </h1>
-              <div className='md:flex my-16'>
-                <h1 className='md:my-12 my-2 uppercase text-2xl font-bold leading-none md:basis-1/2'>
-                  <Number>
-                    PROJECTS
-                  </Number>
-                </h1>
-                <p className='md:basis-1/2 md:mt-12 text-2xl'>
-                  <Number>
-                    A selected set of projects i've built with individuals and teams. This is a mix of personal, collaborative and client owned projects.
-                  </Number>
-                </p>
-              </div>
+              <p className='md:mt-12 text-lg md:text-xl leading-relaxed'>
+                <Number>
+                  A selected set of projects I've built with individuals and teams. This is a mix of personal, collaborative, and client-owned projects.
+                </Number>
+              </p>
             </div>
           </div>
-          <div>
-            {projectItem.map((item, index) => (
-              <div key={index} className='md:flex md:gap-5 mt-16'>
-                <div className='md:basis-2/4 md:h-[80vh] lg:hover:md:py-5 duration-10 lg:custom-scrollbar'>
-                  <a href={item.links}>
-                    <span className='lg:text-[100px] md:my-12 my-2 uppercase text-[55px] font-bold leading-none underline font-PermanentMarker md:font-monica'>
-                      <RevealPop>
-                        {item.companyName}
-                      </RevealPop>
-                    </span>
-                  </a>
-                  <p className='md:mr-32 md:ml-16 my-5 md:text-2xl text-xl md:mt-24 font-bold text-gray-400 uppercase'>
-                    <Number>
-                      {item.companyContext}
-                    </Number>
-                  </p>
-                </div>
-                <Number className="md:basis-2/4 md:flex md:justify-center md:ml-auto md:items-center md:h-[70vh] h-[50vh] mt-3">
-                    <a href={item.links}>
-                      <img src={item.companyImg} alt="project" className="h-full w-auto max-w-full rounded-lg" />
-                    </a>
-                </Number>
-              </div>
-            ))}
-          </div>
         </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+  {projects.map((project, index) => (
+    <motion.div 
+      key={index} 
+      whileHover={{ scale: 1.05 }} 
+      className="project-card bg-gray-800 p-6 rounded-lg shadow-lg"
+    >
+      {/* Project Image */}
+      <img 
+        src={project.image} 
+        alt={`${project.title} preview`} 
+        className="w-full h-40 object-cover rounded-lg mb-4"
+      />
+
+      {/* Project Title and Description */}
+      <h3 className="text-xl font-semibold">{project.title}</h3>
+      <p className="text-gray-400 mt-2">{project.description}</p>
+      <p className="text-gray-300 mt-2">
+        <span className="font-semibold">Technologies:</span> {project.technologies.join(", ")}
+      </p>
+
+      {/* View Project Link */}
+      <Link to={project.link} className="text-yellow-400 mt-4 inline-block" aria-label={`View details for ${project.title}`}>
+        View Project
+      </Link>
+    </motion.div>
+  ))}
+</div>
+
+
+        {/* Call to Action */}
+        <div className="mt-12 text-center">
+          <h2 className="text-3xl font-semibold">Have a Project in Mind?</h2>
+          <p className="text-gray-400 my-2">Let's collaborate and build something amazing.</p>
+          <Link to="/contact" 
+            className="mt-6 bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition" 
+            aria-label="Contact Ali Peter for collaboration"
+          >
+            Contact Me
+          </Link>
         </div>
-      <Footer/>
-    </>
-  )
-}
+      </motion.div>
+      <Footer />
+    </div>
+  );
+};
 
 export default Work;

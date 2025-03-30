@@ -1,97 +1,91 @@
-import React, { useLayoutEffect, useRef, useEffect, useState } from 'react';
-import { motion, useInView, useAnimation } from "framer-motion";
-import Navbar from './components/navbar';
-import Hero from './components/hero';
-import Footer from './components/footer';
-import gsap from 'gsap';
+import { motion } from "framer-motion";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import profile from './assets/profile.png';
+import project1 from './assets/project_image_1.jpg';
+import project2 from './assets/project_image_2.png';
+import { pageTransition } from "./components/animations";
+import { Link } from "react-router-dom";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
-function Home() {
-  const comp = useRef(null);
-  const ref = useRef(null);
-  const heroRef = useRef(null); // Hero section ref
-  const isInView = useInView(ref, { once: true });
-  const slideControl = useAnimation();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (isInView) {
-      slideControl.start("visible");
-    }
-  }, [isInView]);
-
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const t1 = gsap.timeline();
-
-      // Intro animation
-      t1.from('#intro-slider', { xPercent: '-100', duration: 0.3, delay: 0.3 })
-        .from(['#title1', '#title2', '#title3'], { opacity: 0, y: '+=30', stagger: 0.5 })
-        .to(['#title1', '#title2', '#title3'], { opacity: 0, y: '-=30', delay: 0.3, stagger: 0.3 })
-        .to('#intro-slider', { xPercent: '-100', duration: 0.3 })
-        .from('#welcome', { opacity: 0, duration: 0.02 })
-        .eventCallback("onComplete", () => setLoading(false));  // Set loading to false once animation is complete
-
-      // Scroll animation for Hero section
-      gsap.from(heroRef.current, {
-        opacity: 0,
-        y: 100,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          scrub: true,
-          toggleActions: "play none none reverse",
-        },
-      });
-
-    }, comp);
-
-    return () => ctx.revert();
-  }, []);
-
+const Home = () => {
+  const resumeUrl = '/Ali-Ogochukwu-Peter.pdf';
   return (
-    <div className="relative" ref={comp}>
-      {loading && (
-        <div className="absolute inset-0 flex justify-center items-center bg-black opacity-70 z-50">
-          <div className="loader">Loading...</div>
-        </div>
-      )}
+    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <motion.section {...pageTransition} className="container mx-auto p-6 text-center relative flex flex-col items-center">
+        <DotLottieReact
+            src="https://lottie.host/0a9a0441-ac5d-4c8d-b718-dd5bdeda0061/89dPHFuwUV.lottie"
+            className="absolute inset-0 w-full h-full opacity-10 pointer-events-none"
+        />
 
-      <div id="intro-slider" className="h-screen p-10 bg-[#000] text-white absolute top-0 left-0 font-monica z-10 w-full flex flex-col gap-10 tracking-tight">
-        <h1 id="title1" className="md:text-9xl text-[50px]">Software Engineer</h1>
-        <h1 id="title2" className="md:text-9xl text-[50px]">Designer</h1>
-        <h1 id="title3" className="md:text-9xl text-[50px]">Freelancer</h1>
-        <p id="title4" className="font-bold md:text-4xl text-[30px]">Full Stack Developer</p>
-      </div>
-
-      <div id="welcome">
-        <Navbar />
-        <div ref={ref}>
-          <motion.div
-            variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
-            initial="hidden"
-            animate={slideControl}
-            transition={{ duration: 0.5, delay: 3.70, ease: "easeIn" }}
-            style={{
-              position: "absolute",
-              top: 4,
-              bottom: 4,
-              left: 0,
-              right: 0,
-              background: "black",
-              zIndex: 20,
-            }}
-          ></motion.div>
-          {/* Hero Section */}
-          <div ref={heroRef}>
-            <Hero />
-          </div>
+        <img src={profile} alt="Ali Peter" className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full border-4 border-yellow-400" />
+        <h1 className="text-3xl sm:text-5xl font-bold mt-4">Ali Ogochukwu Peter</h1>
+        <p className="mt-4 text-lg sm:text-xl">Full-Stack Developer | Backend Specialist</p>
+        <p className="mt-2 text-gray-400">Building scalable, secure, and efficient backend systems.</p>
+        <div className="mt-4 flex flex-wrap justify-center space-x-3 sm:space-x-4">
+          <a href="https://github.com/Ali-Peter" target="_blank" className="text-yellow-400 hover:underline">GitHub</a>
+          <a href="https://dev.to/ali-peter" target="_blank" className="text-yellow-400 hover:underline">Dev.to</a>
+          <a href="https://x.com/ali_ogochu2581" target="_blank" className="text-yellow-400 hover:underline">Twitter</a>
         </div>
-        <Footer />
-      </div>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Link to="/work" className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">View My Work</Link>
+          <a href={resumeUrl} download className="border border-yellow-400 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 transition">Download Resume</a>
+        </div>
+      </motion.section>
+
+      {/* Skills Overview */}
+      <motion.section {...pageTransition} className="container mx-auto p-6 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold">My Expertise</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
+          {["HTML", "CSS", "React.js", "Tailwind CSS", "Node.js", "Python-Flask", "Express.js", "FastAPI", "PostgreSQL", "MySQL", "MongoDB", "Docker", "Redis", "Celery"].map(skill => (
+            <motion.div key={skill} whileHover={{ scale: 1.1 }} className="bg-gray-800 p-3 sm:p-4 rounded-lg shadow-lg text-center">
+              {skill}
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Projects Section */}
+      <motion.section {...pageTransition} className="container mx-auto p-6 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold">Projects</h2>
+        <p className="text-gray-400 mt-2">A selected set of projects I've built with individuals and teams.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+          {[{ image: project1, link: "https://lagfloral.netlify.app/", title: "Flower Imperials", desc: "E-commerce landing page for a flower shop.", tech: ["ReactJS", "NodeJS", "Tailwind CSS", "Axios", "Flutterwave"] },
+            { image: project2, link: "https://www.wechorafoods.com/", title: "Outbound AI Backend", desc: "AI-powered call automation solution for businesses.", tech: ["FastAPI", "PostgreSQL", "Celery", "Deepgram", "ElevenLabs"] }].map((project, index) => (
+              <motion.div key={index} whileHover={{ scale: 1.05 }} className="bg-gray-800 p-5 rounded-lg shadow-lg">
+                <a href={project.link}>
+                  <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg" />
+                </a>
+                <a href={project.link} className="block font-bold my-3 text-xl text-yellow-400">
+                  {project.title}
+                </a>
+                <p>{project.desc}</p>
+                <div className="flex flex-wrap gap-2 mt-3 justify-center">
+                  {project.tech.map(tech => (
+                    <span key={tech} className="border border-yellow-400 rounded-full px-2 py-1 text-sm">{tech}</span>
+                  ))}
+                </div>
+              </motion.div>
+          ))}
+        </div>
+        <div className="flex justify-center items-center mt-6">
+          <Link to="/work" className="text-yellow-400 hover:underline">Visit my project hub</Link>
+        </div>
+      </motion.section>
+
+      {/* Call to Action */}
+      <motion.section {...pageTransition} className="container mx-auto p-6 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold">Let's Build Something Great</h2>
+        <p className="text-gray-400 my-2">Have a project or opportunity? Let's connect.</p>
+        <Link to="/contact" className="mt-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">Contact Me</Link>
+      </motion.section>
+      
+      <Footer />
     </div>
   );
-}
+};
 
 export default Home;

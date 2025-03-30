@@ -1,6 +1,6 @@
 import profile from '../assets/profile.png';
 import project1 from '../assets/project_image_1.jpg';
-import project2 from '../assets/project_image_2.jpg';
+import project2 from '../assets/project_image_2.png';
 import project3 from '../assets/project_image_3.jpg';
 import nodejs from '../assets/nodejs-logo.png';
 import bootstrap from '../assets/bootstrap-logo.jfif';
