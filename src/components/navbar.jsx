@@ -57,7 +57,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMenu} className="md:hidden text-white text-3xl mr-8">
+        <button onClick={toggleMenu} className="md:hidden text-white text-3xl mr-4">
           {isOpen ? "X" : <CiMenuBurger />}
         </button>
       </div>
