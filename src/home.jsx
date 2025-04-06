@@ -54,7 +54,7 @@ const Home = () => {
         <p className="text-gray-400 mt-2">A selected set of projects I've built with individuals and teams.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
           {[{ image: project1, link: "https://lagfloral.netlify.app/", title: "Flower Imperials", desc: "E-commerce landing page for a flower shop.", tech: ["ReactJS", "NodeJS", "Tailwind CSS", "Axios", "Flutterwave"] },
-            { image: project2, link: "https://www.wechorafoods.com/", title: "Outbound AI Backend", desc: "AI-powered call automation solution for businesses.", tech: ["FastAPI", "PostgreSQL", "Celery", "Deepgram", "ElevenLabs"] }].map((project, index) => (
+            { image: project2, link: "https://outbound.im/", title: "Outbound AI Backend", desc: "AI-powered call automation solution for businesses.", tech: ["FastAPI", "PostgreSQL", "Celery", "Deepgram", "ElevenLabs"] }].map((project, index) => (
               <motion.div key={index} whileHover={{ scale: 1.05 }} className="bg-gray-800 p-5 rounded-lg shadow-lg">
                 <a href={project.link}>
                   <img src={project.image} alt={project.title} className="w-full h-auto rounded-lg" />
