@@ -6,7 +6,7 @@ import project1 from './assets/project_image_1.jpg';
 import project2 from './assets/project_image_2.png';
 import { pageTransition } from "./components/animations";
 import { Link } from "react-router-dom";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 
 const Home = () => {
   const resumeUrl = '/Ali-Ogochukwu-Peter.pdf';
