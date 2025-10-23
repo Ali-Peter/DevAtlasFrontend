@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { CiMenuBurger, CiHome, CiUser, CiMail } from "react-icons/ci";
+import { CiMenuBurger, CiHome, CiUser, CiMail, CiViewList } from "react-icons/ci";
 import { MdWork } from "react-icons/md";
-import { FaFilePdf } from "react-icons/fa";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Logo from '../assets/my_logo.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,19 +20,20 @@ const Navbar = () => {
     { to: "/", icon: <CiHome size={24} />, label: "Home" },
     { to: "/about", icon: <CiUser size={24} />, label: "About" },
     { to: "/work", icon: <MdWork size={24} />, label: "Work" },
-    { to: "/resume", icon: <FaFilePdf size={20} />, label: "Resume" },
+    { to: "/tutorials", icon: <CiViewList size={24} />, label: "Tutorials" },
+   // { to: "/resume", icon: <FaFilePdf size={20} />, label: "Resume" },
     { to: "/contact", icon: <CiMail size={24} />, label: "Contact" },
   ];
 
   return (
-    <nav className="bg-gray-900 p-4 shadow-lg sticky top-0 z-50">
+    <nav className="bg-bgColorWhite p-4 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <a href="/">
-          <DotLottieReact
-            src="https://lottie.host/5ed0404a-a5bd-40b3-a976-76c9edd7edbd/9OGCpDxZR3.lottie"
+          <img
+            src={Logo}
             loop autoplay
-            className="w-32 h-10 hover:scale-125 duration-200"
+            className="w-12 h-12 ml-5 hover:scale-125 duration-200 rounded-full"
           />
         </a>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
               <NavLink
                 to={to}
                 className={({ isActive }) =>
-                  `flex items-center gap-2 text-white text-lg hover:text-yellow-400 transition duration-300 ${
+                  `flex items-center gap-2 text-txtColorBlue text-lg hover:text-yellow-400 transition duration-300 ${
                     isActive ? "text-yellow-400 border-b-2 border-yellow-400" : ""
                   }`
                 }
@@ -57,7 +57,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMenu} className="md:hidden text-white text-3xl mr-4">
+        <button onClick={toggleMenu} className="md:hidden text-txtColorBlue text-3xl mr-4">
           {isOpen ? "X" : <CiMenuBurger />}
         </button>
       </div>
@@ -70,14 +70,14 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="absolute top-16 left-0 w-full h-screen bg-gray-800 flex flex-col space-y-4 py-6 px-8 shadow-lg md:hidden"
+            className="absolute top-16 left-0 w-full h-screen bg-bgColorWhite flex flex-col space-y-4 py-6 px-8 shadow-lg md:hidden"
           >
             {navItems.map(({ to, icon, label }) => (
               <li key={to}>
                 <NavLink
                   to={to}
                   className={({ isActive }) =>
-                    `flex items-center gap-2 text-white text-lg hover:text-yellow-400 transition duration-300 ${
+                    `flex items-center gap-2 text-txtColorBlue text-lg hover:text-yellow-400 transition duration-300 ${
                       isActive ? "text-yellow-400" : ""
                     }`
                   }

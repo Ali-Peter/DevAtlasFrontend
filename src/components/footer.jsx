@@ -14,7 +14,7 @@ function Footer() {
 
   return (
     <>
-      <footer className="bg-black/80 text-white px-2 text-center">
+      <footer className="bg-txtColorBlue text-white px-2 text-center">
         {/* GSAP Animated Footer Content */}
         <motion.div
           className="footer-content"
