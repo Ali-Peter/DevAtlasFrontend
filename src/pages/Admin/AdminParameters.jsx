@@ -60,9 +60,10 @@ const AdminParameters = ({ onSuccess }) => {
     setSuccess("");
     setLoading(true);
     const token = localStorage.getItem("token");
+    const API_URL = import.meta.env.VITE_API_URL;
 
     try {
-      await axios.post("http://localhost:5213/api/Courses", courseInfo, {
+      await axios.post(`${API_URL}/api/Courses`, courseInfo, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSuccess("Course info added successfully!");
@@ -102,7 +103,7 @@ const AdminParameters = ({ onSuccess }) => {
     });
 
     try {
-      await axios.post("http://localhost:5213/api/Courses/CourseOutline", data, {
+      await axios.post(`${API_URL}/api/Courses/CourseOutline`, data, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

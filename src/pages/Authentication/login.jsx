@@ -21,7 +21,8 @@ const Login = () => {
     setError("");
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5213/api/Auth/login", formData);
+      const API_URL = import.meta.env.VITE_API_URL;
+      const res = await axios.post(`${API_URL}/api/Auth/login`, formData);
       if (res.status === 200) {
         localStorage.setItem("token", res.data.token);
         alert("Login successful!");
